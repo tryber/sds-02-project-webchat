@@ -3,13 +3,21 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "jest --runInBand --detectOpenHandles",
+    "start": "node server.js",
+    "debug": "nodemon server.js",
+    "test-coverage": "jest --coverage --watchAll=false --runInBand --detectOpenHandles"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
+    "jest": "^26.4.2",
+    "mongodb": "^3.6.0",
+    "nodemon": "^2.0.4",
+    "path": "^0.12.7",
     "socket.io": "^2.3.0"
   },
   "devDependencies": {
