@@ -3,18 +3,24 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "jest",
+    "start": "nodemon server.js",
+    "test-coverage": "jest --coverage --watchAll=false"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
+    "mongodb": "^3.6.0",
+    "nodemon": "^2.0.4",
     "socket.io": "^2.3.0"
   },
   "devDependencies": {
+    "eslint": "^7.6.0",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.21.2",
-    "eslint": "^7.6.0"
+    "jest": "^26.4.1"
   }
 }
